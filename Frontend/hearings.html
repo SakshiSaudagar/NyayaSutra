@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Hearings | NyayaSutra</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<a href="javascript:history.back()" class="back-button">
+    ← Back
+</a>
+
+<div id="hearingNotifications"></div>
+
+<header class="navbar">
+
+    <div class="logo">⚖ NyayaSutra</div>
+
+    <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="cases.html">Cases</a>
+    <a href="hearings.html">Hearings</a>
+    <a href="clients.html">Clients</a>
+    <a href="tasks.html">Tasks</a>
+
+    <button class="notification-bell" onclick="toggleNotifications()">
+        🔔
+        <span id="notificationCount" class="notification-count">0</span>
+    </button>
+
+    <div id="notificationPanel" class="notification-panel hidden">
+        <h3>Notifications</h3>
+        <div id="notificationList">
+            <p>No new notifications.</p>
+        </div>
+    </div>
+</nav>
+</header>
+
+
+<main class="container">
+
+    <div class="page-heading">
+
+        <div>
+            <h1>Hearing Management</h1>
+
+            <p>
+                Track upcoming and completed hearings.
+            </p>
+        </div>
+
+        <button
+            class="btn"
+            onclick="showHearingForm()">
+            + Add Hearing
+        </button>
+
+    </div>
+
+
+    <div
+        id="hearingForm"
+        class="panel hidden">
+
+        <h2>Add Hearing</h2>
+
+        <form id="hearingFormElement">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>Case Number *</label>
+
+                    <input
+                        id="hearingCaseNumber"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Client Name *</label>
+
+                    <input
+                        id="hearingClientName"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Court *</label>
+
+                    <input
+                        id="hearingCourt"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Hearing Date *</label>
+
+                    <input
+                        type="datetime-local"
+                        id="hearingDate"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Purpose *</label>
+
+                    <input
+                        id="hearingPurpose"
+                        placeholder="e.g. Evidence"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Status</label>
+
+                    <select id="hearingStatus">
+
+                        <option value="Upcoming">
+                            Upcoming
+                        </option>
+
+                        <option value="Completed">
+                            Completed
+                        </option>
+
+                        <option value="Adjourned">
+                            Adjourned
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Notes</label>
+
+                <textarea
+                    id="hearingNotes"
+                ></textarea>
+
+            </div>
+
+
+            <button
+                class="btn"
+                type="submit">
+                Save Hearing
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div class="panel">
+
+        <div id="hearingsContainer">
+            Loading hearings...
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="js/hearings.js"></script>
+
+</body>
+</html>

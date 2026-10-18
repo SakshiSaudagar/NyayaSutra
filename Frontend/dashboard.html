@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | NyayaSutra</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        ⚖ NyayaSutra
+    </div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="cases.html">Cases</a>
+        <a href="hearings.html">Hearings</a>
+        <a href="clients.html">Clients</a>
+        <a href="tasks.html">Tasks</a>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <div class="page-heading">
+
+        <div>
+            <h1>Lawyer Dashboard</h1>
+
+            <p>
+                Overview of your legal workload.
+            </p>
+        </div>
+
+        <a href="add-case.html"
+           class="btn">
+            + Add Case
+        </a>
+
+    </div>
+
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <span>Total Cases</span>
+            <strong id="totalCases">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Pending Cases</span>
+            <strong id="pendingCases">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Active Cases</span>
+            <strong id="activeCases">0</strong>
+        </div>
+
+        <div class="stat-card">
+            <span>Disposed Cases</span>
+            <strong id="disposedCases">0</strong>
+        </div>
+
+    </section>
+
+
+    <section class="dashboard-grid">
+
+        <div class="panel">
+
+            <div class="panel-header">
+                <h2>Upcoming Hearings</h2>
+
+                <a href="hearings.html">
+                    View All
+                </a>
+            </div>
+
+            <div id="hearingList">
+                Loading...
+            </div>
+
+        </div>
+
+
+        <div class="panel">
+
+            <div class="panel-header">
+                <h2>Pending Tasks</h2>
+
+                <a href="tasks.html">
+                    View All
+                </a>
+            </div>
+
+            <div id="taskList">
+                Loading...
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="panel">
+
+        <div class="panel-header">
+
+            <h2>Recent Cases</h2>
+
+            <a href="cases.html">
+                View All
+            </a>
+
+        </div>
+
+        <div id="caseList">
+            Loading...
+        </div>
+
+    </section>
+
+
+    <section class="panel backlog-panel">
+
+        <h2>Backlog Overview</h2>
+
+        <p>
+            These cases are currently pending and
+            may require your attention.
+        </p>
+
+        <div id="backlogList">
+            Loading...
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

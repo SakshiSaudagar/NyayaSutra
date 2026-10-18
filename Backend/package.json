@@ -1,0 +1,25 @@
+{
+  "name": "nyayasutra-backend",
+  "version": "1.0.0",
+  "description": "NyayaSutra - Legal Case and Backlog Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "legal",
+    "case-management",
+    "lawyer",
+    "backlog-management"
+  ],
+  "author": "NyayaSutra Team",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.2"
+  }
+}

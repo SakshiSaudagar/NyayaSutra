@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tasks | NyayaSutra</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<a href="javascript:history.back()" class="back-button">
+    ← Back
+</a>
+
+<header class="navbar">
+
+    <div class="logo">⚖ NyayaSutra</div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="cases.html">Cases</a>
+        <a href="hearings.html">Hearings</a>
+        <a href="clients.html">Clients</a>
+        <a href="tasks.html">Tasks</a>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <div class="page-heading">
+
+        <div>
+
+            <h1>Tasks & Reminders</h1>
+
+            <p>
+                Manage your daily legal work.
+            </p>
+
+        </div>
+
+        <button
+            class="btn"
+            onclick="showTaskForm()">
+            + Add Task
+        </button>
+
+    </div>
+
+
+    <div
+        id="taskForm"
+        class="panel hidden">
+
+        <h2>Add Task</h2>
+
+        <form id="taskFormElement">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label>Task Title *</label>
+
+                    <input
+                        id="taskTitle"
+                        placeholder="Client meeting"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Related Case</label>
+
+                    <input
+                        id="relatedCase"
+                        placeholder="NYA/2026/001"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Due Date</label>
+
+                    <input
+                        type="datetime-local"
+                        id="taskDueDate"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Priority</label>
+
+                    <select id="taskPriority">
+
+                        <option value="Low">
+                            Low
+                        </option>
+
+                        <option value="Medium">
+                            Medium
+                        </option>
+
+                        <option value="High">
+                            High
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Description</label>
+
+                <textarea
+                    id="taskDescription">
+                </textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn">
+                Save Task
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <div class="panel">
+
+        <div id="tasksContainer">
+            Loading tasks...
+        </div>
+
+    </div>
+
+</main>
+
+
+<script src="js/tasks.js"></script>
+
+</body>
+</html>

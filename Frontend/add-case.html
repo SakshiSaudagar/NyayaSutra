@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Case | NyayaSutra</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<a href="javascript:history.back()" class="back-button">
+    ← Back
+</a>
+
+<header class="navbar">
+
+    <div class="logo">⚖ NyayaSutra</div>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="cases.html">Cases</a>
+        <a href="hearings.html">Hearings</a>
+        <a href="clients.html">Clients</a>
+        <a href="tasks.html">Tasks</a>
+    </nav>
+
+</header>
+
+
+<main class="container form-container">
+
+    <div class="page-heading">
+
+        <div>
+            <h1>Add New Case</h1>
+            <p>Register a new legal case.</p>
+        </div>
+
+    </div>
+
+
+    <form id="caseForm">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label>Case Number *</label>
+
+                <input
+                    type="text"
+                    id="caseNumber"
+                    placeholder="NYA/2026/001"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Case Title *</label>
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter case title"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Client Name *</label>
+
+                <input
+                    type="text"
+                    id="clientName"
+                    placeholder="Enter client name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Case Type *</label>
+
+                <select id="caseType" required>
+
+                    <option value="Civil">
+                        Civil
+                    </option>
+
+                    <option value="Criminal">
+                        Criminal
+                    </option>
+
+                    <option value="Family">
+                        Family
+                    </option>
+
+                    <option value="Property">
+                        Property
+                    </option>
+
+                    <option value="Corporate">
+                        Corporate
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Court *</label>
+
+                <input
+                    type="text"
+                    id="court"
+                    placeholder="Enter court name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Filing Date *</label>
+
+                <input
+                    type="date"
+                    id="filingDate"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Next Hearing</label>
+
+                <input
+                    type="date"
+                    id="nextHearing"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Status</label>
+
+                <select id="status">
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Active">
+                        Active
+                    </option>
+
+                    <option value="Disposed">
+                        Disposed
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Priority</label>
+
+                <select id="priority">
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                    <option value="Medium" selected>
+                        Medium
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Description</label>
+
+            <textarea
+                id="description"
+                placeholder="Enter case notes or important information..."
+            ></textarea>
+
+        </div>
+
+
+        <div class="form-actions">
+
+            <a href="cases.html"
+               class="btn secondary">
+                Cancel
+            </a>
+
+            <button
+                type="submit"
+                class="btn">
+                Save Case
+            </button>
+
+        </div>
+
+    </form>
+
+</main>
+
+
+<script src="js/add-case.js"></script>
+
+</body>
+</html>
